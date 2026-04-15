@@ -2,23 +2,25 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import Button from './ui/Button';// Button component import kiya
 
 export default function Problem() {
   const problems = [
     {
-      title: "Fragmented Data",
+      title: "Ryyva Loom - Workflow Orchestration",
       image: "/images/ai.avif",
-      text: "Most enterprises carry the same wound. Customer intelligence lives on many platforms, disconnected and dormant. The data exists, but the meaning is lost in the gaps."
+      text: "The core engine. Connects disparate systems, deploys decentralised agents and orchestrates workflows across every node of your organisation. Loom is the thing that does the weaving."
     },
     {
-      title: "Intuition-Led",
+      title: "Ryyva Thread - Data Intelligence ",
       image: "/images/problem2.avif",
-      text: "Operational decisions are often made on instinct rather than insight. Demand signals disappear before anyone notices them because the dots aren't connected."
+      text: "The single view engine. Pulls from every source into one unified profile - customer, operational, financial. Thread is the fabric of truth that every agent acts on."
     },
     {
-      title: "The Missing Weave",
+      title: "Ryyva Weave - Agentic Concierge",
       image: "/images/workflow.jpg",
-      text: "The problem is not a lack of data; it is a lack of weave. Ryyva exists for the moment when distributed complexity needs to become one coherent, intelligent thing."
+      text: "The customer-facing intelligence layer. Conversational agents across WhatsApp, voice, app and web - personalised, context-aware and seamlessly human when it needs to be."
     }
   ];
 
@@ -27,17 +29,19 @@ export default function Problem() {
       <div className="max-w-7xl mx-auto">
         
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--color-ryyva-green)] mb-6 md:mb-10">
-          THE PROBLEM
+          THE RYYVA PLATFORM
         </p>
 
         <div className="max-w-3xl lg:mb-24 mb-12">
           <h2 className="text-[var(--color-ink)] text-[40px] lg:text-[56px] leading-[1.1] font-heading tracking-tight">
-            Your data exists. <br />
-            <span className="italic font-normal text-[var(--color-ryyva-green)]/90">Your intelligence doesn't.</span>
+            Three products. 
+            <br />
+            <span className="italic font-normal text-[var(--color-ryyva-green)]/90">One fabric.</span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 items-stretch">
+        {/* Grid Section */}
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 items-stretch mb-20">
           {problems.map((item, index) => (
             <div key={index} className="group flex flex-col h-full cursor-default">
               
@@ -51,7 +55,7 @@ export default function Problem() {
               </div>
 
               <div className="flex flex-col flex-grow transition-transform duration-500 group-hover:-translate-y-1">
-                <h3 className="text-[26px] lg:text-[30px] font-heading italic mb-5 leading-tight text-[var(--color-ryyva-green)]!">
+                <h3 className="text-[26px] lg:text-[30px] font-heading italic mb-5 leading-tight text-[var(--color-ryyva-green)]">
                   {item.title}
                 </h3>
                 
@@ -66,6 +70,23 @@ export default function Problem() {
             </div>
           ))}
         </div>
+
+        {/* Footer Note & CTA Area */}
+        <div className="pt-12 border-t border-[var(--color-border)]/50 flex flex-col md:flex-row justify-between items-start gap-8">
+          <div className="max-w-2xl">
+            <p className="text-[15px] lg:text-[17px] text-[var(--color-ink)]/80 leading-relaxed italic">
+              Each product is independently deployable. Together they are the complete Ryyva stack - a single operating intelligence for every layer of your enterprise.
+            </p>
+          </div>
+          
+           {/* CTA Button */}
+        <div className="flex justify-center">
+          <Button variant="primary" href="#contact">
+            Explore the platform
+          </Button>
+        </div>
+        </div>
+
       </div>
     </section>
   );

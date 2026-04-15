@@ -8,17 +8,17 @@ export default function WhatWeDo() {
     {
       title: "Synthesise",
       image: "/images/what1.avif",
-      text: "We do not add complexity. We resolve it. Ryyva takes your existing systems, your existing data and your existing operations - and weaves them into a single intelligence fabric."
+      text: "We do not add complexity. We resolve it. Ryyva takes your existing systems, your existing data and your existing operations - and weaves them into a single intelligence fabric. Every agent. Every decision. Every signal. One source of truth."
     },
     {
       title: "Orchestrate",
       image: "/images/what2.avif",
-      text: "Our agents are not automations. They are not rule-followers. They sense, reason, act and escalate - continuously, without waiting to be asked. Decentralised by design."
+      text: " Our agents are not automations. They are not rule-followers. They sense, reason, act and escalate - continuously, without waiting to be asked. Decentralised by design so no single point of failure can bring the system down."
     },
     {
       title: "Weave",
       image: "/images/what3.avif",
-      text: "The outcome is not just integrated data. It is intelligence that improves with every interaction, every transaction, every touchpoint. The longer Ryyva runs, the smarter it becomes."
+      text: "The outcome is not just integrated data. It is intelligence that improves with every interaction, every transaction, every touchpoint. The longer Ryyva runs, the smarter it becomes. This is what separates us from every workflow tool that came before."
     }
   ];
 

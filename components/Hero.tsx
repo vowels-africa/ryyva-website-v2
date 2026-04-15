@@ -17,10 +17,10 @@ export default function Hero() {
   }, [controls]);
 
   return (
-    <section className="relative bg-[var(--color-forest)] text-white flex items-center overflow-hidden px-6 py-20  lg:min-h-[85vh]">
+    <section className="relative bg-[var(--color-forest)]  text-white flex items-center overflow-hidden px-6 py-20  lg:min-h-[85vh]">
 
       {/* ── 1. Animated Weave Breathing ── */}
-      {/* Sinuous parallel lines: felt, not seen. Opacity oscillates 8%→15% */}
+  
       <motion.div
         initial={{ opacity: 0.08 }}
         animate={{ opacity: [0.08, 0.15, 0.08] }}
@@ -98,9 +98,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-2xl"
         >
-          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--color-ryyva-light)] mb-8 block">
-            Complexity, woven into clarity.
-          </span>
+          
 
           <h1 className="!text-white text-[48px] md:text-[64px] lg:text-[72px] font-medium leading-[1.05] mb-8 tracking-tighter font-heading">
             Complexity, <br />

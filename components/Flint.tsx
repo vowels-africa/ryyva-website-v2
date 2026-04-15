@@ -123,7 +123,7 @@ function StatItem({
   );
 }
 
-// Fixed Variants Typing
+//  Variants Typing
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 18 },
   visible: (delay: number) => ({
@@ -199,14 +199,19 @@ export default function Flint() {
           custom={0.3}
         >
           <p>
-            Flint is Ryyva's AI lead generation product — designed to identify, qualify and engage
-            high-intent prospects at the precise moment a life event makes them ready to act.
+            Flint is Ryyva's AI lead generation product - designed to identify, qualify and engage
+high-intent prospects at the precise moment a life event makes them ready to act. Insurance.
+Financial services. Telecommunications. Flint finds the signal in the noise and puts the right
+conversation in front of the right person at the right time
           </p>
           <p>
-            Built on the same agentic infrastructure as the Ryyva platform. Delivered as a
-            standalone product for clients who need immediate lead intelligence without a full
-            platform deployment.
+            Built on the same agentic infrastructure as the Ryyva platform. Delivered as a standalone
+product for clients who need immediate lead intelligence without a full platform deployment.
+
           </p>
+          <p><span className='text-[var(--color-flint-amber)]'>Flint does two things exceptionally well:</span> Identifies life-event triggers - the moments when
+people are most likely to make a decision - and routes qualified leads to your sales team or
+engages them directly through automated outreach</p>
         </motion.div>
 
         <motion.div
@@ -244,7 +249,10 @@ export default function Flint() {
           custom={0.55}
         >
           <p className="text-xs text-[var(--color-flint-ash)]/35 leading-relaxed max-w-2xl font-medium">
-            Flint is one application of the Ryyva intelligence framework.
+            Flint is one application of the Ryyva intelligence framework. The platform is
+the foundation - Flint is what happens when you point that intelligence at a specific, high-value
+commercial problem.
+
           </p>
         </motion.div>
       </div>
