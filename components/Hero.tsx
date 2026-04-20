@@ -17,7 +17,7 @@ export default function Hero() {
   }, [controls]);
 
   return (
-    <section className="relative bg-[var(--color-forest)]  text-white flex items-center overflow-hidden px-6 py-20  lg:min-h-[85vh]">
+    <section className="relative bg-[var(--color-forest)]  text-white flex items-center overflow-hidden px-6 pt-40 pb-20  lg:min-h-[85vh]">
 
       {/* ── 1. Animated Weave Breathing ── */}
   

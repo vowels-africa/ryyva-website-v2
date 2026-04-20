@@ -1,29 +1,45 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react"; 
 import Button from "./ui/Button";
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  // Updated Styles: 12-13px size as per UI Label rule 
-  const navLinkStyle = "font-body font-medium text-[13px] uppercase tracking-[0.02em] text-[var(--color-ink)] hover:text-[var(--color-ryyva-green)] transition-colors duration-300";
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [open]);
+
+  const navLinkStyle = "font-body font-medium  lg:text-[13px] md:text-[10px] uppercase tracking-[0.02em] text-[var(--color-ink)] hover:text-[var(--color-ryyva-green)] transition-colors duration-300";
+ 
   return (
-    <header className="bg-white sticky top-0 z-50 border-b border-[var(--color-border)]">
-      <div className="max-w-7xl mx-auto flex justify-between items-center py-5 lg:px-6 px-6">
+    <header className="bg-white fixed top-0 left-0 w-full z-[100] border-b border-[var(--color-border)]">
+      <div className="max-w-7xl mx-auto flex justify-between items-center py-5 lg:px-6 md:px-3">
 
-        {/* Wordmark: Following strict color table  */}
-        <Link href="/" className="font-heading text-2xl tracking-tight leading-none group">
-          <span className="text-[var(--color-ink)]">R</span>
-          <span className="text-[var(--color-ryyva-green)]">yy</span>
-          <span className="text-[#0F6E56]">va</span> {/* Correct Forest Mid for Light BG  */}
+        <Link href="/" className="flex items-center">
+          <Image 
+            src="/images/lightlogo.png" 
+            alt="Ryyva Logo" 
+            width={110} 
+            height={35} 
+            priority 
+            className="object-contain"
+          />
         </Link>
 
-        {/* Desktop Nav: Generous spacing [cite: 35] */}
-        <nav className="hidden md:flex lg:gap-10 gap-6 items-center">
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex lg:gap-10 gap-3 items-center">
           <Link href="#what" className={navLinkStyle}>What We Do</Link>
           <Link href="#how" className={navLinkStyle}>How It Works</Link>
           <Link href="#flint" className={navLinkStyle}>Flint</Link>
@@ -33,7 +49,6 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden md:block">
-          {/* CTA: Action-led text  */}
           <Button variant="primary" showArrow={true} href="#contact">
             Start the conversation
           </Button>
@@ -49,9 +64,9 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu: Premium drawer feel */}
+      {/* Mobile Menu: Ab height automatic (content jitni) hogi */}
       {open && (
-        <div className="md:hidden bg-white border-t border-[var(--color-border)] px-6 py-12 flex flex-col gap-8 animate-in fade-in slide-in-from-top-2 duration-300">
+        <div className="md:hidden bg-white border-t border-[var(--color-border)] px-6 py-8 flex flex-col gap-6 animate-in fade-in slide-in-from-top-2 duration-300">
           <Link href="#what" onClick={() => setOpen(false)} className={navLinkStyle}>What We Do</Link>
           <Link href="#how" onClick={() => setOpen(false)} className={navLinkStyle}>How It Works</Link>
           <Link href="#flint" onClick={() => setOpen(false)} className={navLinkStyle}>Flint</Link>
@@ -59,7 +74,7 @@ export default function Navbar() {
           <Link href="#about" onClick={() => setOpen(false)} className={navLinkStyle}>About</Link>
           <Link href="#contact" onClick={() => setOpen(false)} className={navLinkStyle}>Contact</Link>
 
-          <Button variant="primary" className="w-full mt-4" href="#contact">
+          <Button variant="primary" className="w-full mt-2" href="#contact">
             Start the conversation
           </Button>
         </div>
