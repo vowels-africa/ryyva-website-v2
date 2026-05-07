@@ -1,6 +1,5 @@
 "use client";
 
-import React from 'react';
 import Link from "next/link";
 import Image from "next/image"; // Image import kiya
 
@@ -18,13 +17,12 @@ export default function Footer() {
             <div className="space-y-8">
               
               {/* Replacing Text Wordmark with Image Logo */}
-              <div className="select-none">
-                <Image 
-                  src="/images/darklogo.png" 
-                  alt="Ryyva Logo" 
-                  width={120} 
-                  height={40} 
-                  className="object-contain"
+              <div className="select-none relative w-[120px] h-[40px]">
+                <Image
+                  src="/images/darklogo.png"
+                  alt="Ryyva Logo"
+                  fill
+                  className="object-contain object-left"
                 />
               </div>
               

@@ -28,14 +28,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center py-5 lg:px-6 md:px-3">
 
         <Link href="/" className="flex items-center">
-          <Image 
-            src="/images/lightlogo.png" 
-            alt="Ryyva Logo" 
-            width={110} 
-            height={35} 
-            priority 
-            className="object-contain"
-          />
+          <div className="relative w-[110px] h-[35px]">
+            <Image
+              src="/images/lightlogo.png"
+              alt="Ryyva Logo"
+              fill
+              priority
+              className="object-contain object-left"
+            />
+          </div>
         </Link>
 
         {/* Desktop Nav */}
