@@ -5,22 +5,24 @@ import { MoveRight } from "lucide-react";
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'flint'; 
+  variant?: 'primary' | 'flint';
   type?: 'button' | 'submit' | 'reset';
   className?: string;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   showArrow?: boolean;
   href?: string; // Anchor link (e.g., "#contact")
+  disabled?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ 
-  children, 
-  variant = 'primary', 
-  type = 'button', 
-  className = '', 
+const Button: React.FC<ButtonProps> = ({
+  children,
+  variant = 'primary',
+  type = 'button',
+  className = '',
   onClick,
   showArrow = true,
-  href 
+  href,
+  disabled = false,
 }) => {
   
   const handleScroll = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -53,7 +55,8 @@ const Button: React.FC<ButtonProps> = ({
     <button
       type={type}
       onClick={handleScroll}
-      className={`${baseStyles} ${variants[variant]} ${className}`}
+      disabled={disabled}
+      className={`${baseStyles} ${variants[variant]} ${className} disabled:opacity-50 disabled:cursor-not-allowed`}
     >
       <span className="relative z-10">{children}</span>
       
