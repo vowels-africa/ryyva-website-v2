@@ -45,6 +45,7 @@ export default function Navbar() {
           <Link href="#how" className={navLinkStyle}>How It Works</Link>
           <Link href="#flint" className={navLinkStyle}>Flint</Link>
           <Link href="#work" className={navLinkStyle}>Our Work</Link>
+          <Link href="#portal" className={navLinkStyle}>Portal</Link>
           <Link href="#about" className={navLinkStyle}>About</Link>
           <Link href="#contact" className={navLinkStyle}>Contact</Link>
         </nav>
@@ -72,6 +73,7 @@ export default function Navbar() {
           <Link href="#how" onClick={() => setOpen(false)} className={navLinkStyle}>How It Works</Link>
           <Link href="#flint" onClick={() => setOpen(false)} className={navLinkStyle}>Flint</Link>
           <Link href="#work" onClick={() => setOpen(false)} className={navLinkStyle}>Our Work</Link>
+          <Link href="#portal" onClick={() => setOpen(false)} className={navLinkStyle}>Portal</Link>
           <Link href="#about" onClick={() => setOpen(false)} className={navLinkStyle}>About</Link>
           <Link href="#contact" onClick={() => setOpen(false)} className={navLinkStyle}>Contact</Link>
 

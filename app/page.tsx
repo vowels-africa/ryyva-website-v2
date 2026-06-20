@@ -4,6 +4,7 @@ import Problem from "@/components/Problem";
 import WhatWeDo from "@/components/WhatWeDo";
 import Platform from "@/components/Platform";
 import Flint from "@/components/Flint";
+import Portal from "@/components/Portal";
 import Work from "@/components/Work";
 import WhyRyyva from "@/components/WhyRyyva";
 import CTA from "@/components/CTA";
@@ -26,6 +27,8 @@ export default function Home() {
       <Flint />
 
       <Work />
+
+      <Portal />
 
       <WhyRyyva />
 
