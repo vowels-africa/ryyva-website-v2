@@ -51,7 +51,7 @@ export default function Portal() {
     radial-gradient(120% 90% at 88% -10%, rgba(95,224,203,.10) 0%, rgba(95,224,203,0) 45%),
     radial-gradient(110% 120% at 50% 120%, #0a1813 0%, var(--pt-bg0) 70%),
     var(--pt-bg1);
-  padding:96px 24px;
+  padding:48px 24px;
   overflow:hidden;
   isolation:isolate;
 }
@@ -129,8 +129,14 @@ export default function Portal() {
 .portal-sec.pt-in .pt-msg:nth-child(4){animation-delay:1.1s}
 .portal-sec.pt-in .pt-msg:nth-child(5){animation-delay:1.7s}
 .portal-sec.pt-in .pt-msg:nth-child(6){animation-delay:2.2s}
+@media (min-width:921px){
+  .portal-sec{padding:96px 24px}
+}
+@media (min-width:1024px){
+  .portal-sec{padding:144px 24px}
+}
 @media (max-width:920px){
-  .portal-sec{padding:72px 20px}
+  .portal-sec{padding:48px 20px}
   .portal-sec .pt-hero{grid-template-columns:1fr;gap:48px}
   .portal-sec .pt-stage{order:-1}
   .portal-sec .pt-steps{grid-template-columns:1fr}
