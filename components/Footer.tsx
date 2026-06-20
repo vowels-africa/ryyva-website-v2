@@ -39,6 +39,7 @@ export default function Footer() {
               <Link href="#what" className="hover:text-[var(--color-ryyva-light)] transition-colors">What We Do</Link>
               <Link href="#how" className="hover:text-[var(--color-ryyva-light)] transition-colors">How It Works</Link>
               <Link href="#flint" className="hover:text-[var(--color-ryyva-light)] transition-colors">Flint</Link>
+              <Link href="#portal" className="hover:text-[var(--color-ryyva-light)] transition-colors">Portal</Link>
             </div>
             <div className="flex flex-col gap-5">
               <Link href="#work" className="hover:text-[var(--color-ryyva-light)] transition-colors">Our Work</Link>
@@ -71,7 +72,7 @@ export default function Footer() {
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-ryyva-green)]"></span>
                 <p className="text-[10px] font-body font-semibold uppercase tracking-[0.15em] text-[var(--color-ryyva-green)]">
-                  Flint is a Ryyva product
+                  Flint and Portal are Ryyva products
                 </p>
               </div>
           </div>
